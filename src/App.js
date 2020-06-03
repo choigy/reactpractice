@@ -29,16 +29,18 @@ function Content(){
   );
 };
 
-
-
-
 function App() {
   return (
     <div>
       <h1>React Router DOM example</h1>
-      <Route><Home></Home></Route>
-      <Route><Topics></Topics></Route>
-      <Route><Content></Content></Route>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/topics">Topics</a></li>
+        <li><a href="/content">Content</a></li>
+      </ul>
+      <Route exact path="/"><Home></Home></Route>
+      <Route path="/topics"><Topics></Topics></Route>
+      <Route path="/content"><Content></Content></Route>
     </div>
   );
 }
